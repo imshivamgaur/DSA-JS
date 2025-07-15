@@ -10,14 +10,12 @@ class MyArray {
     this.length = 0;
     this.data = {};
   }
-  
   push(item) {
     this.data[this.length] = item;
     this.length++;
     // console.log(this.data);
     return this.length;
   }
-
   get(index) {
     const item = this.data[index];
     return item;
@@ -28,7 +26,13 @@ class MyArray {
     this.length--;
     return lastItem;
   }
+
+  shift() {
+    const firstItem = this.data[this.length - this.length];
+    return console.log(this.data[firstItem]);
+  }
 }
+
 
 const myNewArray = new MyArray();
 
@@ -36,7 +40,10 @@ myNewArray.push("apple");
 myNewArray.push("orange");
 myNewArray.push("mango");
 myNewArray.push("banana");
-console.log(myNewArray);
-myNewArray.pop();
-console.log(myNewArray);
+// console.log(myNewArray);
+// myNewArray.pop();
+// console.log(myNewArray);
 // console.log(myNewArray.get(2));
+
+myNewArray.shift()
+
